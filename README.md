@@ -1,2 +1,2 @@
 # Group-Project
-Out Night Planning Web App
+Our app for staying in or going out.
