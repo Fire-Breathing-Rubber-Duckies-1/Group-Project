@@ -67,13 +67,54 @@ font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
 }
-
+.container{
+    background: orange;
+    margin: 0, 0;
+}
 #header-div {
     background: black;
 }
 
 #staying-in-header {
-    background: orange;
     padding: 20px;
 }
 
+.dropdown-cols {
+    padding: 20px;
+}
+
+.descriptions{
+    padding: 20px;
+    font-size: 25px;
+}
+
+.body2-4 {
+    background: orange;
+}
+.container{
+    
+    /* font-family: 'Hind Madurai', sans-serif; */
+    
+}
+.dropdown {
+    margin: 0 auto;
+}
+
+#dropdownMenu1 {
+    font-size: 20px;
+    background-image: none;
+    background: olive;
+    color: orange;
+}
+.dropdown-menu {
+    background: olive;
+    font-size: 20px;
+    color: orange;
+}
+
+.second-header {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+
+}

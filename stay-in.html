@@ -8,10 +8,11 @@
     <title>Stay In</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai|Righteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
+<body class="body2-4">
     <div class="row">
         <div class="col-md-12" id="header-div">
             <h1 class="title">The Name of our App Goes here</h1>
@@ -19,82 +20,85 @@
     </div>
     <div class="row">
         <div class="col-md-12" id="staying-in-header">
-            <h2 class="staying-in">Staying in tonight</h2>
+            <h2 class="second-header">Staying in tonight</h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6" id="pick-a-movie">
-            <p id="pick-movie-description">Select a movie genre you like you and your party to watch that we can recommend!</p>
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="true">
-                    Select a movie genre
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li>
-                        <a href="#">Horror</a>
-                    </li>
-                    <li>
-                        <a href="#">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="#">Romance</a>
-                    </li>
-                    <li>
-                        <a href="#">Action</a>
-                    </li>
-                    <li>
-                        <a href="#">Drama</a>
-                    </li>
-                    <li>
-                        <a href="#">Documentery</a>
-                    </li>
-                    <li role="separator" class="divider"></li>
-                    <li>
-                        <a href="#">Separated link</a>
-                    </li>
-                </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 descriptions">
+                <p id="pick-movie-description">Select a movie genre you like you and your party to watch that we can recommend!</p>
+            </div>
+            <div class="col-md-6 descriptions">
+                <p id="pick-a-food-description">Select a type of food so we can recommend some restaurants that deliver</p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 dropdown-cols" id="pick-a-movie">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="true">
+                        Select a movie genre
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <a href="#">Horror</a>
+                        </li>
+                        <li>
+                            <a href="#">Comedy</a>
+                        </li>
+                        <li>
+                            <a href="#">Romance</a>
+                        </li>
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Drama</a>
+                        </li>
+                        <li>
+                            <a href="#">Documentery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="col-md-6" id="pick-a-food">
-            <p id="pick-a-food-description">Select a type of food so we can recommend some restaurants that deliver</p>
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="true">
-                    Select a Type of Food
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li>
-                        <a href="#">American</a>
-                    </li>
-                    <li>
-                        <a href="#">Chinese</a>
-                    </li>
-                    <li>
-                        <a href="#">Japanese</a>
-                    </li>
-                    <li>
-                        <a href="#">Mexican</a>
-                    </li>
-                    <li>
-                        <a href="#">Indian</a>
-                    </li>
-                    <li>
-                        <a href="#">Fast Food</a>
-                    </li>
-                    <li role="separator" class="divider"></li>
-                    <li>
-                        <a href="#">Separated link</a>
-                    </li>
-                </ul>
+            <div class="col-md-6 dropdown-cols" id="pick-a-food">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="true">
+                        Select a Type of Food
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <a href="#">American</a>
+                        </li>
+                        <li>
+                            <a href="#">Chinese</a>
+                        </li>
+                        <li>
+                            <a href="#">Japanese</a>
+                        </li>
+                        <li>
+                            <a href="#">Mexican</a>
+                        </li>
+                        <li>
+                            <a href="#">Indian</a>
+                        </li>
+                        <li>
+                            <a href="#">Fast Food</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="assets/script.js"></script>
 </body>
 
