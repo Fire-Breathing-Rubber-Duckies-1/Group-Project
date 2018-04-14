@@ -27,8 +27,9 @@
             $("#content-holder").prepend('<div> <h1> <span id="info"> </span> <h1> </div>');
 
             var url = response.businesses[i].url
+            var namme = response.businesse[i].name
             
-            var namer = $('<a href="' + url + '"> click me </a>');
+            var namer = $('<a href="' + url + '"> ' + namme + ' </a>');
             var rating = $("<div>").append(response.businesses[i].rating)
             var phone = $("<div>").append(response.businesses[i].phone)
             
