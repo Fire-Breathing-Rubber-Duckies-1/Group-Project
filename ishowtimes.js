@@ -70,6 +70,7 @@ function handleGoingOutClick(e) {
 
 
 
+<<<<<<< HEAD
         //     // // moviesAtTheaters is an array of arrays containing each movie and all of its showtimes for each theater. problem is how to display movie and corresponding showtimes without duplicating the movie name over and over!!!  
         //     const moviesAtTheaters = theaters.map(function(theater) {
         //         return movies.map(function(movie) {
@@ -107,6 +108,45 @@ function handleGoingOutClick(e) {
                 
         //     });
         //     console.log(JSON.stringify(movieTitles))
+=======
+            // // moviesAtTheaters is an array of arrays containing each movie and all of its showtimes for each theater. problem is how to display movie and corresponding showtimes without duplicating the movie name over and over!!!  
+            const moviesAtTheaters = theaters.map(function(theater) {
+                return movies.map(function(movie) {
+                    return showtimes.filter(function(showtime) {
+                        return showtime.movie_id === movie.id && showtime.cinema_id === theater.id;
+                        
+                    });
+                });
+            });
+
+            console.log(moviesAtTheaters)
+
+           for (var i = 0; i < moviesAtTheaters.length; i++) {
+               var q = $("<div>")
+               q.text(moviesAtTheaters[i].start_at)
+               g.append(q)
+
+           }
+
+            // // we are looping thru all movies at each theater and retrieving only the movie_id of each movie. goal is to loop thru showtimes and filter by movie_id 
+            const movieIdsLis = moviesAtTheaters.map(function(movies) {
+                return movies.map(function(movie){
+                });
+            });
+
+
+            // // how do we "flatten" this to become an array of objects rather array of an array of objects? too many arrays makes it hard to grab data needed
+            const movieTitles = movieIdsLis.map(function(movieIds) {
+
+                return movieIds.map(function(id) {
+                    return movies.filter(function(movie) {
+                        return movie.id === id
+                    });
+                });
+                
+            });
+            console.log(JSON.stringify(movieTitles))
+>>>>>>> 02264ced7e8b8347719ed46565e9ce3dcdf2a0b2
 
 
 
