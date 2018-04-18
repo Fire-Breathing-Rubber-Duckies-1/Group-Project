@@ -26,7 +26,7 @@
         
         for (var i = 0; i < response.businesses.length; i++) {
 
-            $("#content-holder").prepend('<div> <h1> <span id="info"> </span> <h1> </div>');
+            $("#content-holder").append('<div> <h1> <span id="info"> </span> <h1> </div>');
 
             var url = response.businesses[i].url
             var namme = response.businesses[i].name
@@ -45,9 +45,25 @@
             div.attr('src', img)
             div.addClass("vote")
             div.attr("Data-State", "unclicked")
+            div.attr("Name", namme)
             console.log(div)
+            
     
             $("#info").append(div)
+
+
+            $(".vote").on('click', function(){
+              var state = $("img").attr("Data-State")
+              var voting = $("<h3> <div id='vote'> </h3>")
+              var counter = 0
+              if (state === "unclicked") {
+                $(this).attr("Data-State", "clicked")
+                counter++
+                voting.text($(this).attr("Name") + "= " + counter)
+                 $("#content-holder").append(voting)
+                 $("#yes").append(voting)
+              }
+            })
             
             
             
