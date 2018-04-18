@@ -1,15 +1,16 @@
    $( document ).ready(function() {
    
     let token = "Bearer XCKbzZHW8v3vXJbl2iouO9IGz2IhnrLPb6_UHmjkLy_QIk2P5w5UIqvK-0CNM7OzLvYbP1rbccFC9tWTzVY5YKc-PpHAA55bllNwVhSzWi47ndPnK8F1-MprbBPQWnYx"
-    let search = "https://api.yelp.com/v3/transactions/delivery/search"
+    let search = "https://api.yelp.com/v3/businesses/search"
     let corsAnywhere = "https://cors-anywhere.herokuapp.com/"
-    var zip= $("#zip").val()
+    var zip = $("#zip").val()
+    var term = $("#type").val()
     search = corsAnywhere + search
     console.log(search)
 
     let requestObj = {
       url: search,
-      data: {location: zip},
+      data: {term: term, location: zip},
       headers: {'Authorization': token},
       error: function(j, textStatus, errorThrown) {
         console.log(`Ajax => ${j}, textStatus => ${textStatus}, errorThrown => ${errorThrown}`)
