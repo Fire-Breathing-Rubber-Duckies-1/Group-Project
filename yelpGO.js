@@ -1,7 +1,9 @@
+
    $("#submit2").on('click', function(event) {
    event.preventDefault()
 
     let token = "Bearer Fb_cwVKg4ODNzdtxziO3Yj6NC_RnW498C6_Tk1svho-TzraerxvKIGBfymZfR-3kE8jpYqic6l6cp2shLrkNypGr0H0XV_ghVNqfSy_Wo7QqRN_iR-w-6LZYn6vWWnYx"
+
     let search = "https://api.yelp.com/v3/businesses/search"
     let corsAnywhere = "https://cors-anywhere.herokuapp.com/"
     var zip = $("#zip").val()
@@ -28,7 +30,9 @@
             $("#content-holder").prepend('<div> <h1> <span id="info"> </span> <h1> </div>');
 
             var url = response.businesses[i].url
+
             var namme = response.businesses[i].name
+
             
             var namer = $('<a href="' + url + '"> ' + namme + ' </a>');
             var rating = $("<div>").append(response.businesses[i].rating)
