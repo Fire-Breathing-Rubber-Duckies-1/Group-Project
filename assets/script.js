@@ -1,6 +1,6 @@
 var apiKey = "93635545f1df3e7c0d3f30734cd346fd"
 //var userChoice = Whatever data the user chooses 
-var URL = "https://api.themoviedb.org/3/search/movie?api_key=93635545f1df3e7c0d3f30734cd346fd" + "&query=" + userChoice + "&language=en-US" + "&maxlength=5"
+var URL = "https://api.themoviedb.org/3/search/movie?api_key=93635545f1df3e7c0d3f30734cd346fd" + "&query=" + movieGenre + "&language=en-US" + "&maxlength=5"
 $.ajax({
   url: URL,
   method: "GET"
@@ -99,4 +99,3 @@ $.ajax({
     console.log("Failed" + errorObject.code);
   });
   
-$()

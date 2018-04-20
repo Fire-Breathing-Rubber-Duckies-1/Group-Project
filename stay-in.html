@@ -17,7 +17,7 @@
 
     <div class="row">
         <div class="col-md-12" id="header-div">
-            <h1 class="title">The Name of our App Goes here</h1>
+            <h1 class="title">StaGo</h1>
         </div>
     </div>
     <div class="row">
@@ -29,49 +29,42 @@
         <div class="row" style="text-align: center;">
             <div class="col-md-12 dropdown-cols" id="pick-a-movie">
                 <p id="pick-movie-description">Select a movie genre to watch to go with delivery options available in your area</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="true">
-                        Select a movie genre
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="text-align: center;">
-                        <li>
-                            <a href="#">Horror</a>
-                        </li>
-                        <li>
-                            <a href="#">Comedy</a>
-                        </li>
-                        <li>
-                            <a href="#">Romance</a>
-                        </li>
-                        <li>
-                            <a href="#">Action</a>
-                        </li>
-                        <li>
-                            <a href="#">Drama</a>
-                        </li>
-                        <li>
-                            <a href="#">Documentery</a>
-                        </li>
-                    </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button id="genre-button" class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        <input id="movie-genre-input" type="text" class="form-control" placeholder="Search for a movie genre">
+                    </div>
+                    <!-- /input-group -->
                 </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="zipcode-input" type="text" class="form-control" placeholder="Enter your Zip Code">
+                        <span class="input-group-btn">
+                            <!-- <button id class="btn btn-default" type="button">Go!</button> -->
+                        </span>
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 submit-button-div" style="text-align: center;">
-                <button class="submit-button">Submit</button>
-            </div>
-        </div>
+            <!-- /.row -->
+
+<div class="row">
+    <div class="col-md-12 submit-button-div" style="text-align: center;">
+<button id="stay-in-submit" class="submit-button">Submit</button>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="yelp.js"></script>
-    <script type="text/javascript" src="assets/goingOutMovie.js"></script>
 
-    <script type="text/javascript" src="assets/script.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="yelp.js"></script>
+            <script src="stay-in.js"></script>
 </body>
 
 </html>
