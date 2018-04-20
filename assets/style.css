@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     text-align: center;
     font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
@@ -20,6 +24,7 @@ font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
 #col1 {
     padding: 200px;
     background-color: black;
+    /* background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BXNm_sd0ej1t37l41/videoblocks-people-group-sitting-on-couch-using-tablet-computer-watching-tv-program-talking-young-friends-communication-slow-motion-60_rljhjtwx_thumbnail-full01.png"); */
     background-image: url("https://cdn.postgradproblems.com/wp-content/uploads/2016/09/a8191590dc5c964da941ea8d6cf9f12c.jpg");
     background-repeat: no-repeat;
     text-align: center;
@@ -28,7 +33,8 @@ font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
 
 #col2 {
     padding: 200px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGrTwoXYZxdQv_EX_c2D97bNonDlitEhlXi1iW9uDz13msQ1uM");
+    background-image: url("https://res.cloudinary.com/jerrick/image/upload/c_fit,f_auto,fl_progressive,q_auto,w_1140/ghwjxr1szcd0t3k0kf3u");
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGrTwoXYZxdQv_EX_c2D97bNonDlitEhlXi1iW9uDz13msQ1uM"); */
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,13 +73,90 @@ font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
 }
-
+.container{
+    background: orange;
+    margin: 0, 0;
+}
 #header-div {
     background: black;
 }
+.title {
+    font-family: 'Righteous', cursive;
+}
 
 #staying-in-header {
-    background: orange;
     padding: 20px;
 }
 
+.dropdown-cols {
+    padding: 20px;
+}
+
+.descriptions{
+    padding: 20px;
+    font-size: 25px;
+}
+
+.body2-4 {
+    background: orange;
+}
+
+
+.container { 
+    
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 25px;
+
+    
+}
+.dropdown {
+    margin: 0 auto;
+}
+
+#dropdownMenu1 {
+    font-size: 20px;
+    background-image: none;
+    background: olive;
+    color: orange;
+
+
+    border-color: black;
+
+}
+.dropdown-menu {
+    background: olive;
+    font-size: 20px;
+    color: orange;
+}
+
+.second-header {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+
+
+    font-family: 'Fugaz One', cursive;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 70px;
+    background: olive;
+    color: orange;
+    border-color: black;
+
+}
+
+.results {
+    padding: 0 15px;
+}
+
+.results img{
+    max-width: 100%;
+}
+
+
+/* #resultsHeader{
+    display: flex;
+    justify-content: center;
+} */
