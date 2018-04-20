@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Go Out</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Hind+Madurai|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
 
-    <form id="go-out-choices">
-        <fieldset>
-            <input id="citySearch" type="text" name= "user-city">
-        </fieldset>
-        <button id ="submit">Submit</button> 
-    </form>
 
-    <div id="content-holder"></div>
-    
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+<body class="body2-4">
+
+    <div class="row">
+        <div class="col-md-12" id="header-div">
+            <h1 class="title">StaGo</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="staying-in-header">
+            <h2 class="second-header">Going Out</h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+
+                <div id="content-holder"></div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <form id="go-out-movies">
+                    <h3>Movies</h3>
+                    <fieldset>
+                        <input id="citySearch" type="text" name="user-city">
+                    </fieldset>
+                    <button id="submit1">Submit</button>
+                </form>
+
+
+                <form id="go-out-yelp">
+
+                    <h3>Food</h3>
+                    <h5>Zip Code</h5>
+                    <fieldset>
+                        <input id="zip" type="text" name="user-location">
+                    </fieldset>
+                    <h5>Type of Food</h5>
+                    <fieldset>
+                        <input id="type" type="text" name="type">
+                    </fieldset>
+                    <button id="submit0">Submit</button>
+                </form>
+
+            </div>
+            <div class="col-md-4">
+                <div id="content-holder2"></div>
+            </div>
+
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/script.js"></script>
-    <script type="text/javascript" src="assets/goingOutMovie.js"></script>
-    <!-- <script type="text/javascript" src="assets/ishowtimes.js"></script> -->
-</body>
+    <script src="yelpGO.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="ishowtimes.js"></script>
+
+
+
 </html>

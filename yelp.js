@@ -4,13 +4,12 @@
     let search = "https://api.yelp.com/v3/transactions/delivery/search"
     let corsAnywhere = "https://cors-anywhere.herokuapp.com/"
     var zip= $("#zip").val()
-    var delivery= $("#type").val()
     search = corsAnywhere + search
     console.log(search)
 
     let requestObj = {
       url: search,
-      data: {term: 'restaurants', location: '94015'},
+      data: {location: zip},
       headers: {'Authorization': token},
       error: function(j, textStatus, errorThrown) {
         console.log(`Ajax => ${j}, textStatus => ${textStatus}, errorThrown => ${errorThrown}`)
