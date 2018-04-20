@@ -134,7 +134,7 @@ function handleGoingOutClick(e) {
             
             $("#resultsHeader").append('<p>Theaters</p>').css({'font-size': '35px', 'font-weight':'bold'})
 
-            $("#content-holder2").append('<a href="votinginput.html">Go to Vote Page!</a>')
+            $("#content-holder2").append('<a href="votingInput.html">Go to Vote Page!</a>')
 
             var theaterImg = "https://screenrant.com/wp-content/uploads/2018/03/Movie-theater.jpg"
 

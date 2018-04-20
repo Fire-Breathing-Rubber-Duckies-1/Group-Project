@@ -25,7 +25,7 @@
         console.log(response)
 
         $("#resultsHeader").prepend('<p>Resturants</p>').css({'font-size': '35px', 'font-weight':'bold'})
-        $("#content-holder2").prepend('<a href="votinginput.html">Go to Vote Page!</a>')
+        $("#content-holder2").prepend('<a href="votingInput.html">Go to Vote Page!</a>')
 
 
         for (var i = 0; i < response.businesses.length; i++) {

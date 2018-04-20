@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vote with friends page</title>
+
+    <link rel="stylesheet" href="Project1/Group-Project/assets/style.css">
+     <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!-- Bootstrap CDN-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+     <!-- Firebase Reference -->
+     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+     <!-- Link to assets -->
+ 
+
+</head>
+<body class="body2-4">
+  <div class="row">
+    <div class="col-md-12" id="header-div">
+      <h1 class='title'>Stago</h1>
+    </div>
+  </div>
+ <div class="row">
+   <div class="col-md-12" id = "voting-header">
+    <h2 class="second-header">Voting Page</h2>
+   </div>
+ </div>
+ 
+
+<div class="container">
+    <h3> Input your choices and have your friends vote!</h3>
+
+  <!-- Input for activity HIDING
+    <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Food">
+         
+        </div>
+     </div>
+     <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Food"> 
+        </div>
+     </div>
+  <!-- Input for Food 
+    <div class="col-lg-6">
+        <div class="input-group">
+           <input type="text" class="form-control" id = "activity-input" placeholder="Activity">
+       </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="input-group">
+           <input type="text" class="form-control" id = "activity-input2" placeholder="Activity">
+       </div>
+    </div>
+
+           Submit button 
+    <div class="button">
+    <button id ="submit1">Submit</button> 
+    </div> 
+    -->
+
+<!-- Form for input choices -->
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add your activity, movie and/or food choices</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="choice1">Choice 1</label>
+                  <input class="form-control" id="one" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="choice2">Choice 2</label>
+                  <input class="form-control" id="two" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="choice3">Choice 3</label>
+                    <input class="form-control" id="three" type="text">
+                  </div>
+                 <!-- <div class="form-group">
+                      <label for="choice4">Choice 4</label>
+                      <input class="form-control" id="four" type="text">
+                    </div>  
+                  -->
+                <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+<!-- Display user input for Voting-->
+<div class="results">
+
+  <!-- Div for first chocie -->
+    <div class="first"></div>
+    <!-- Thumbs up Button/Down -->
+<div class="row">
+    <div class="col-lg-6">
+  <div id = "Yes"> <button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Thumbs Up
+    </button>
+  </div>
+  <div id = "No"> <button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Thumbs Down
+    </button>
+  </div>
+</div>
+<!-- Display voting results -->
+<div class = "Results-Div"> <h2> Results</h2>
+  <div id = "results"></div>
+</div>
+</div>
+
+<!-- Div for second choice -->
+    <div class="second"></div>
+    <!--Thumbs up Button-->
+    <div class="row">
+        <div class="col-lg-6">
+      <div id = "Yes"> <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Thumbs Up
+        </button>
+      </div>
+      <div id = "No"> <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Thumbs Down
+        </button>
+      </div>
+    </div>
+
+<script>
+
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyBexNmapKolINtyUFngltIb-2vlLWB3H4w",
+    authDomain: "class-pr.firebaseapp.com",
+    databaseURL: "https://class-pr.firebaseio.com",
+    projectId: "class-pr",
+    storageBucket: "",
+    messagingSenderId: "583763053083"
+    };
+    firebase.initializeApp(config);
+
+    //Create vriable to reference database
+    var database = firebase.database();
+
+//Initial Value of counters
+var yesStart = 0;
+var noStart = 0;
+
+//Counter variables set equal to intial value
+var yes = yesStart;
+var no = noStart;
+
+//When the user clicks a button 
+$('#Yes').on("click", function(){
+  event.preventDefault();
+  //Add one to yes counter
+  if(!yes){
+    yes = 0;
+  }
+  yes ++;
+
+  //Create limit for counter
+  if (yes === 20){
+    console.log("Too many votes");
+    yes = 0;
+    no=0;
+  }
+
+  //Save new value to firebase
+  database.ref().set({
+    yes:yes,
+    no:no
+  });
+  
+  //Log value of yes counter
+  console.log(yes);
+
+});
+
+//When the user clicks a button 
+$('#No').on("click", function(){
+  event.preventDefault();
+  //Add one to no counter
+  if(!no){
+    no = 0;
+  }
+  no ++;
+
+  //Create limit for counter
+  if (no === 20){
+    console.log("Too many votes");
+    no = 0;
+    yes=0;
+  }
+
+  //Save new value to firebase
+  database.ref().set({
+    no:no,
+    yes:yes
+
+  });
+  
+  //Log value of yes counter
+  console.log(no);
+
+});
+
+database.ref().on('value', function(snapshot){
+
+  //Console log out value
+  console.log(snapshot.val());
+
+  //Change value of of yes and no to match database
+   yes = snapshot.val().yes;
+   no = snapshot.val().no;
+
+  //Update HTML
+  $('#results').text("Thumbs Up: " + snapshot.val().yes + " Thumbs Down: " + snapshot.val().no);
+
+  //It erros
+}, function(errorObject){
+  console.log("Failed" + errorObject.code);
+});
+
+//When user clicks SUBMIT
+$('#submit').on("click", function(){
+  event.preventDefault();
+  //get input values
+  var choice1 = $('#one').val().trim();
+  var choice2= $('#two').val().trim();
+  var choice3= $('#three').val().trim();
+
+  console.log(choice1)
+  $('.first').html("First choice: " + choice1)
+  $('.second').html(choice2)
+
+})
+
+ 
+  
+</script>
+    
+</body>
+</html>
